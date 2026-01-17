@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // match your backend port
+const socket = io("https://workforce-backend-syjg.onrender.com"); // match your backend port
 
 const LiveStatusFeed = () => {
   const [logs, setLogs] = useState([]);

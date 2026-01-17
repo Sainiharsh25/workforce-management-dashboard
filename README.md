@@ -102,7 +102,7 @@ cd workforce-dashboard
 
 3. Update WebSocket endpoint in `.env`:
    ```env
-   REACT_APP_SOCKET_URL=http://localhost:5000
+   REACT_APP_SOCKET_URL=https://workforce-backend-syjg.onrender.com
    ```
 
 4. Start the React app:

@@ -11,7 +11,7 @@ const Employees = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/employees");
+        const response = await axios.get("https://workforce-backend-syjg.onrender.com/api/employees");
         setEmployees(response.data);
       } catch (error) {
         console.error("Error fetching employee data:", error);

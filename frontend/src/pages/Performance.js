@@ -21,7 +21,7 @@ const Performance = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const empRes = await axios.get("http://localhost:5000/api/performance/overview");
+        const empRes = await axios.get("https://workforce-backend-syjg.onrender.com/api/performance/overview");
         const employeeData = empRes.data.allEmployees || [];
 
         const alertsGenerated = employeeData

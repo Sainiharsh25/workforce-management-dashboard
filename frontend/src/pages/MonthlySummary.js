@@ -9,5 +9,4 @@ const MonthlySummary = () => {
     </div>
   );
 };
-
 export default MonthlySummary;

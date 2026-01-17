@@ -37,24 +37,24 @@ export default function Dashboard() {
 
   useEffect(() => {
     // Initial fetch from REST API
-    axios.get("http://localhost:5000/api/performance/top5")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/performance/top5")
       .then(res => setTopPerformers(res.data))
       .catch(err => console.error("Failed to fetch top performers:", err));
 
-    axios.get("http://localhost:5000/api/dashboard/task-data")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/dashboard/task-data")
       .then(res => setTaskData(res.data))
       .catch(err => console.error("Failed to fetch task data:", err));
 
-    axios.get("http://localhost:5000/api/dashboard/earnings")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/dashboard/earnings")
       .then(res => setEarningData(res.data))
       .catch(err => console.error("Failed to fetch earnings:", err));
 
-    axios.get("http://localhost:5000/api/dashboard/performance-weekly")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/dashboard/performance-weekly")
       .then(res => setDailyPerformanceData(res.data))
       .catch(err => console.error("Failed to fetch performance data:", err));
 
     // Connect to WebSocket server
-    const socket = io("http://localhost:5000"); // 👈 Adjust if your server runs on another port
+    const socket = io("https://workforce-backend-syjg.onrender.com"); // 👈 Adjust if your server runs on another port
 
     // Listen for updates
     socket.on("updateTaskData", newTaskData => setTaskData(newTaskData));

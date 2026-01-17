@@ -58,11 +58,11 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/performance/top5")
+      .get("https://workforce-backend-syjg.onrender.com/api/performance/top5")
       // .then((res) => setTopPerformers(res.data))
       .catch((err) => console.error("Failed to fetch top performers:", err));
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://workforce-backend-syjg.onrender.com");
 
     socket.on("connect", () => {
       console.log("✅ Socket.IO connected");

@@ -30,11 +30,11 @@ const EmployeeActivity = () => {
   const [allRatings, setAllRatings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/kpi/metrics")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/kpi/metrics")
       .then(res => setKpis(res.data))
       .catch(err => console.error("Failed to load KPI data:", err));
 
-    axios.get("http://localhost:5000/api/kpi/performance")
+    axios.get("https://workforce-backend-syjg.onrender.com/api/kpi/performance")
       .then(res => {
         setTopPerformers(res.data.top5);
         setAllRatings(res.data.all);
